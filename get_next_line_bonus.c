@@ -6,7 +6,7 @@
 /*   By: zait-err <zait-err@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 14:54:19 by zait-err          #+#    #+#             */
-/*   Updated: 2024/12/01 18:24:58 by zait-err         ###   ########.fr       */
+/*   Updated: 2024/12/01 19:02:42 by zait-err         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ char	*get_next_line(int fd)
 {
 	char	*lines;
 	static char *stash[1024];
+	// static char** stash;
+
+	// if (NULL == stash) {
+	// 	stash = malloc(10240 * sizeof(char*));
+	// }
 	lines = NULL;
 	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= 1024)
 		return (NULL);
