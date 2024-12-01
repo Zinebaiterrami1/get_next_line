@@ -6,7 +6,7 @@
 /*   By: zait-err <zait-err@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 14:49:00 by zait-err          #+#    #+#             */
-/*   Updated: 2024/11/26 15:02:52 by zait-err         ###   ########.fr       */
+/*   Updated: 2024/11/28 11:19:04 by zait-err         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
+#  define BUFFER_SIZE 10000
 # endif
 
 char	*get_next_line(int fd);
@@ -30,6 +30,8 @@ char	*_set_line(char *line_buffer);
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *str, int c);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *s1, char *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char *_helper_function(char *line);
 
 #endif
